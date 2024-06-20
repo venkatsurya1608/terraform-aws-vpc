@@ -168,7 +168,7 @@ resource "aws_route" "database_route_nat" {
   nat_gateway_id = aws_nat_gateway.nat.id
 }
 
-#### Route table and subnet associations ####
+#### Route table and subnet associations 
 resource "aws_route_table_association" "public" {
   count = length(var.public_subnet_cidrs)
   subnet_id      = element(aws_subnet.public[*].id, count.index)
