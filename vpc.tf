@@ -7,7 +7,7 @@ resource "aws_vpc" "main" {
     var.common_tags,
     var.vpc_tags,
     {
-        Name = local.resource_name
+        Name = local.resource_name                       #  https://github.com/venkatsurya1608/terraform-main-expense/tree/main
     }
   )
 }
